@@ -179,7 +179,7 @@ public:
 
 	struct ERROR
 	{
-		static const uint8_t EINVAL = 2;
+		static const uint8_t EINVAL_RENAME = 2;
 	};
 
 public:
@@ -190,7 +190,7 @@ public:
 	TLC59108(TwoWire i2c, const byte i2c_address);
 
 	// creates an instance managing drivers on the specified address with the default interface
-	TLC59108(const byte i2c_address);
+	//TLC59108(const byte i2c_address);
 
 	// initializes the driver by performing a hardware reset (if pin is specified) and enabling the oscillator
 	uint8_t init(const uint8_t hwResetPin = 0);
