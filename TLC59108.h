@@ -26,7 +26,7 @@
 class TLC59108
 {
 public:
-	static const byte NUM_CHANNELS = 8;
+	static const byte NUM_CHANNELS = 16;
 
 	// default I2C addresses
 	// datasheet, pp 12-13
