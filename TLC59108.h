@@ -32,12 +32,12 @@ public:
 	// datasheet, pp 12-13
 	struct I2C_ADDR
 	{
-		static const byte BASE = 0x40;
-		static const byte SWRESET = 0x4b;
-		static const byte ALLCALL = 0x48;
-		static const byte SUB1 = 0x49;
-		static const byte SUB2 = 0x4a;
-		static const byte SUB3 = 0x4c;
+		static const byte BASE = 0x60;
+		static const byte SWRESET = 0x6b;
+		static const byte ALLCALL = 0x68;
+		static const byte SUB1 = 0x69;
+		static const byte SUB2 = 0x6a;
+		static const byte SUB3 = 0x6c;
 	};
 
 	// register auto-increment modes for setting multiple registers
@@ -123,49 +123,89 @@ public:
 			static const byte ADDR = 0x09;
 		};
 
-		struct GRPPWM
+		struct PWM8
 		{
 			static const byte ADDR = 0x0a;
 		};
 
-		struct GRPFREQ
+		struct PWM9
 		{
 			static const byte ADDR = 0x0b;
 		};
 
-		struct LEDOUT0
+		struct PWM10
 		{
 			static const byte ADDR = 0x0c;
 		};
 
-		struct LEDOUT1
+		struct PWM11
 		{
 			static const byte ADDR = 0x0d;
 		};
 
-		struct SUBADR1
+		struct PWM12
 		{
 			static const byte ADDR = 0x0e;
 		};
 
-		struct SUBADR2
+		struct PWM13
 		{
 			static const byte ADDR = 0x0f;
 		};
 
-		struct SUBADR3
+		struct PWM14
 		{
 			static const byte ADDR = 0x10;
 		};
 
-		struct ALLCALLADR
+		struct PWM15
 		{
 			static const byte ADDR = 0x11;
 		};
 
+		struct GRPPWM
+		{
+			static const byte ADDR = 0x12; // 0a
+		};
+
+		struct GRPFREQ
+		{
+			static const byte ADDR = 0x13; // 0b
+		};
+
+		struct LEDOUT0
+		{
+			static const byte ADDR = 0x14; // 0c
+		};
+
+		struct LEDOUT1
+		{
+			static const byte ADDR = 0x15; // 0d
+		};
+
+		struct SUBADR1
+		{
+			static const byte ADDR = 0x18; // 0e
+		};
+
+		struct SUBADR2
+		{
+			static const byte ADDR = 0x19; // 0f
+		};
+
+		struct SUBADR3
+		{
+			static const byte ADDR = 0x1a; // 10
+		};
+
+		struct ALLCALLADR
+		{
+			static const byte ADDR = 0x1b; // 11
+		};
+
 		struct IREF
 		{
-			static const byte ADDR = 0x12;
+			static const byte ADDR = 0x1c; // 12
 
 			static const byte CM = 0x80; // current multiplier
 			static const byte HC = 0x40; // subcurrent
@@ -173,7 +213,7 @@ public:
 
 		struct EFLAG
 		{
-			static const byte ADDR = 0x13;
+			static const byte ADDR = 0x1d; // 13
 		};
 	};
 
